@@ -86,11 +86,11 @@ export default function SandboxPage() {
               </h3>
 
               <div className="space-y-6">
-                <InputGroup label="Entry Price" value={params.entry} onChange={(v) => setParams({...params, entry: v})} step={100} />
-                <InputGroup label="Leverage" value={params.leverage} onChange={(v) => setParams({...params, leverage: v})} min={1} max={100} />
-                <InputGroup label="Position Size (USDT)" value={params.size} onChange={(v) => setParams({...params, size: v})} step={500} />
-                <InputGroup label="Take Profit" value={params.tp} onChange={(v) => setParams({...params, tp: v})} step={100} />
-                <InputGroup label="Stop Loss" value={params.sl} onChange={(v) => setParams({...params, sl: v})} step={100} />
+                <InputGroup label="Entry Price" value={params.entry} onChange={(v: any) => setParams({...params, entry: v})} step={100} />
+                <InputGroup label="Leverage" value={params.leverage} onChange={(v: any) => setParams({...params, leverage: v})} min={1} max={100} />
+                <InputGroup label="Position Size (USDT)" value={params.size} onChange={(v: any) => setParams({...params, size: v})} step={500} />
+                <InputGroup label="Take Profit" value={params.tp} onChange={(v: any) => setParams({...params, tp: v})} step={100} />
+                <InputGroup label="Stop Loss" value={params.sl} onChange={(v: any) => setParams({...params, sl: v})} step={100} />
               </div>
 
               <div className="flex gap-4">

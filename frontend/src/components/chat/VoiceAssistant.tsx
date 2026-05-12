@@ -8,8 +8,7 @@ import {
   VolumeX, 
   Cpu, 
   MessageSquare,
-  Activity,
-  Waveform
+  Activity
 } from "lucide-react";
 
 export default function VoiceAssistant({ onQuery }: { onQuery: (q: string) => Promise<string> }) {

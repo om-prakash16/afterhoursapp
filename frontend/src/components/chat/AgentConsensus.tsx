@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { getAgentConsensus } from "@/lib/api";
 
-export default function AgentConsensus({ tradeParams }: { tradeParams: any }) {
+export default function AgentConsensus({ tradeParams, onProceed }: { tradeParams: any, onProceed?: () => void }) {
   const [consensus, setConsensus] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [activeAgent, setActiveAgent] = useState(0);
@@ -113,7 +113,7 @@ export default function AgentConsensus({ tradeParams }: { tradeParams: any }) {
                {consensus.summary}
             </p>
          </div>
-         <button className="w-full py-5 rounded-2xl bg-indigo-600 text-white font-black text-xs uppercase tracking-widest hover:bg-indigo-500 transition-all shadow-xl shadow-indigo-600/20 flex items-center justify-center gap-3 group">
+         <button onClick={onProceed} className="w-full py-5 rounded-2xl bg-indigo-600 text-white font-black text-xs uppercase tracking-widest hover:bg-indigo-500 transition-all shadow-xl shadow-indigo-600/20 flex items-center justify-center gap-3 group">
             Proceed with Execution <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
          </button>
       </div>

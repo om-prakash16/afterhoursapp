@@ -12,7 +12,9 @@ import {
   Brain,
   Lock,
   ChevronRight,
-  Sparkles
+  Sparkles,
+  Award,
+  CheckCircle2
 } from "lucide-react";
 
 export default function ProgressionPage() {

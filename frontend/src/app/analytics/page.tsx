@@ -11,7 +11,9 @@ import {
   Target,
   ShieldAlert,
   ArrowRight,
-  Activity
+  Activity,
+  Flame,
+  ShieldCheck
 } from "lucide-react";
 import { 
   AreaChart, 
@@ -208,7 +210,7 @@ export default function AnalyticsPage() {
                        <span className="text-[10px] font-black uppercase tracking-widest">Oversized Leverage</span>
                     </div>
                     <p className="text-xs text-slate-400 leading-relaxed font-medium">
-                       After a loss > $500, your average leverage increases from 5x to <span className="text-white font-bold">18x</span>. This indicates a revenge-trading habit.
+                       After a loss &gt; $500, your average leverage increases from 5x to <span className="text-white font-bold">18x</span>. This indicates a revenge-trading habit.
                     </p>
                  </div>
                  

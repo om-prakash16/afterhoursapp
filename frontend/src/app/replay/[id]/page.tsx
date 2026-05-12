@@ -30,7 +30,7 @@ export default function ReplayPage({ params }: { params: Promise<{ id: string }>
   useEffect(() => {
     const fetchReplay = async () => {
       try {
-        const result = await getTradeReplay(parseInt(id));
+        const result = await getTradeReplay(id);
         setData(result);
       } catch (err) {
         console.error("Replay fetch failed", err);

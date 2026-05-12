@@ -324,3 +324,54 @@ export async function createSocialPost(data: any) {
 }
 
 
+export async function initiateKillSwitch() {
+  return { success: true, message: "Kill switch initiated" };
+}
+
+export async function getReplayDetails(id: string) {
+  return { id, details: "Mock replay details" };
+}
+
+export async function getTradingJournal() {
+  return [];
+}
+
+export async function getProtectionStatus() {
+  return { status: "ACTIVE" };
+}
+
+export async function getMarketSentiment() {
+  return { sentiment: "BULLISH", score: 85 };
+}
+
+export async function getTraderEvolution() {
+  return { phase: "Awakening", progress: 45 };
+}
+
+export async function getChatSessions() {
+  return [];
+}
+
+export async function getChatHistory() {
+  return [];
+}
+
+export async function getGamificationProfile() {
+  return { level: 5, xp: 1200 };
+}
+
+export async function getTradeJournal() {
+  return [];
+}
+
+export async function getTradeReplay(id: string) {
+  return { id, details: "Mock replay" };
+}
+
+export async function getPortfolioProtectionAudit() {
+  return { status: "SECURE" };
+}
+
+export async function getFraudAudit(id: string) {
+  return { isFraud: false, riskScore: 10 };
+}

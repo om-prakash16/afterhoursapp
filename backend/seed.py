@@ -85,14 +85,14 @@ async def seed_data():
         # 4. Create Signal Providers
         provider = SignalProvider(
             name="Institutional Whale",
-            strategy="Macro Trend",
+            description="Macro Trend Strategy",
             win_rate=76.2,
             avg_leverage=5,
             consistency_score=94,
             trust_score=98,
-            is_verified=True
         )
         db.add(provider)
+
         await db.commit()
         await db.refresh(provider)
 
