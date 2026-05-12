@@ -1,4 +1,4 @@
-from typing import List, Dict, Set
+from typing import Annotated, Any, List, Dict, Optional
 import re
 
 class ExtractionService:

@@ -3,8 +3,8 @@ from sqlalchemy import DateTime
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.sql import func
 
-class TimestampMixin:
-    """Mixin for models that need created_at and updated_at timestamps."""
+class AuditMixin:
+    """Mixin for models that need created_at, updated_at, and is_deleted."""
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), 
         default=lambda: datetime.now(timezone.utc),
@@ -16,3 +16,4 @@ class TimestampMixin:
         onupdate=lambda: datetime.now(timezone.utc),
         server_default=func.now()
     )
+    is_deleted: Mapped[bool] = mapped_column(default=False, index=True)

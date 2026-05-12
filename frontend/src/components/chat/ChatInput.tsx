@@ -36,13 +36,10 @@ export default function ChatInput({ onSendMessage, disabled }: ChatInputProps) {
   }, [message]);
 
   return (
-    <div className="relative group flex items-end gap-2 bg-white/80 backdrop-blur-md border border-slate-200 rounded-2xl p-2 pr-3 shadow-lg focus-within:ring-2 focus-within:ring-indigo-500/20 focus-within:border-indigo-400 transition-all">
-      <div className="flex items-center gap-1 pl-1 pb-1.5">
-        <button className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors">
+    <div className="relative group flex items-end gap-3 bg-white/5 border border-white/10 rounded-[1.5rem] p-3 pr-4 focus-within:border-indigo-500/50 transition-all">
+      <div className="flex items-center gap-1 pb-1.5">
+        <button className="p-2 text-slate-500 hover:text-white hover:bg-white/5 rounded-xl transition-colors">
           <ImageIcon size={20} />
-        </button>
-        <button className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors">
-          <Smile size={20} />
         </button>
       </div>
       
@@ -52,8 +49,8 @@ export default function ChatInput({ onSendMessage, disabled }: ChatInputProps) {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Ask anything..."
-        className="flex-1 bg-transparent border-none focus:ring-0 text-slate-800 placeholder:text-slate-400 py-2 resize-none max-h-[200px] min-h-[40px]"
+        placeholder="Analyze market conditions..."
+        className="flex-1 bg-transparent border-none focus:ring-0 text-white placeholder:text-slate-600 py-2.5 resize-none max-h-[200px] min-h-[44px] font-medium"
         disabled={disabled}
       />
       
@@ -61,10 +58,10 @@ export default function ChatInput({ onSendMessage, disabled }: ChatInputProps) {
         onClick={handleSend}
         disabled={!message.trim() || disabled}
         className={cn(
-          "mb-1 p-2.5 rounded-xl transition-all duration-200",
+          "mb-1 w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-200",
           message.trim() && !disabled
-            ? "bg-indigo-600 text-white shadow-indigo-200 shadow-lg hover:bg-indigo-700 active:scale-95"
-            : "bg-slate-100 text-slate-400 cursor-not-allowed"
+            ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20 hover:bg-indigo-500 active:scale-95"
+            : "bg-white/5 text-slate-600 cursor-not-allowed"
         )}
       >
         <Send size={18} />

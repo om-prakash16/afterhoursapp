@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Annotated, Any, List, Dict, Optional
 from app.models.memory import Memory
 
 class ContextService:

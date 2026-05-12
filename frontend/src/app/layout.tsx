@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: "A secure and empathetic AI companion that remembers and grows with you.",
 };
 
+import { AuthProvider } from "@/components/auth/AuthProvider";
+import MobileNav from "@/components/MobileNav";
+import DemoModeOverlay from "@/components/dashboard/DemoMode";
+import CooldownOverlay from "@/components/ui/CooldownOverlay";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,11 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable} h-full`}>
-      <body className="font-inter bg-slate-50 min-h-full flex flex-col">
-        <Navbar />
-        <main className="flex-1 pb-20 md:pb-0 md:pt-20">
-          {children}
-        </main>
+      <body className="font-inter bg-[#020617] min-h-full flex flex-col text-slate-200">
+        <AuthProvider>
+          <Navbar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <MobileNav />
+          <DemoModeOverlay />
+          <CooldownOverlay />
+        </AuthProvider>
       </body>
     </html>
   );

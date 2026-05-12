@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing import Annotated, Any, List, Dict, Optional
 import io
 
 class VisionService:

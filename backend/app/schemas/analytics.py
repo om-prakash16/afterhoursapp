@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Optional
+from typing import Annotated, Any, List, Dict, Optional
 from pydantic import BaseModel
 
 class MoodPoint(BaseModel):

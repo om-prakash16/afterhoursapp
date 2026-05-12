@@ -12,3 +12,5 @@ pytest==8.0.2
 pytest-asyncio==0.23.5
 opencv-python-headless==4.9.0.80
 Pillow==10.2.0
+aiomysql==0.2.0
+cryptography==42.0.5

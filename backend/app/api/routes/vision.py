@@ -1,6 +1,6 @@
+from typing import Annotated, Any, List, Dict, Optional
 from fastapi import APIRouter, UploadFile, File, HTTPException, status
 from app.services.vision_service import vision_service
-from typing import Dict, Any
 
 router = APIRouter(prefix="/vision", tags=["vision"])
 

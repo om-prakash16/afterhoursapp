@@ -2,9 +2,10 @@ import uuid
 from sqlalchemy import String, UUID, ForeignKey, Text, Index
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.core.database import Base
-from app.models.base import TimestampMixin
+from app.models.base import AuditMixin
+from app.core.database import Base
 
-class Memory(Base, TimestampMixin):
+class Memory(Base, AuditMixin):
     __tablename__ = "memories"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

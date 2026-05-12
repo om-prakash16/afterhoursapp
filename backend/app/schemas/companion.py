@@ -1,5 +1,5 @@
+from typing import Annotated, Any, List, Dict, Optional
 import uuid
-from typing import Optional, Dict, Any
 from pydantic import BaseModel, ConfigDict
 
 class CompanionBase(BaseModel):

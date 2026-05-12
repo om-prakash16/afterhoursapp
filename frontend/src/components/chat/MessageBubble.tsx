@@ -18,18 +18,18 @@ export default function MessageBubble({ role, content, timestamp }: MessageBubbl
     >
       <div
         className={cn(
-          "max-w-[80%] rounded-2xl px-4 py-3 text-sm md:text-base transition-all",
+          "max-w-[85%] rounded-[1.5rem] px-6 py-4 text-sm md:text-base transition-all",
           isAssistant
-            ? "bg-white text-slate-800 shadow-sm border border-slate-100 rounded-tl-none"
-            : "bg-indigo-600 text-white shadow-indigo-100 shadow-lg rounded-tr-none"
+            ? "bg-white/5 text-slate-300 border border-white/5 rounded-tl-none"
+            : "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20 rounded-tr-none font-medium"
         )}
       >
         <p className="leading-relaxed whitespace-pre-wrap">{content}</p>
         {timestamp && (
           <span
             className={cn(
-              "text-[10px] mt-1 block opacity-50 text-right",
-              isAssistant ? "text-slate-400" : "text-indigo-200"
+              "text-[9px] mt-2 block font-black uppercase tracking-widest text-right",
+              isAssistant ? "text-slate-500" : "text-indigo-200"
             )}
           >
             {timestamp}

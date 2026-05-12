@@ -1,10 +1,10 @@
+from typing import Annotated, Any, List, Dict, Optional
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.core.database import get_db
 from app.models.companion import Companion
 from app.schemas.companion import CompanionCreate, Companion as CompanionSchema
-from typing import List
 
 router = APIRouter(prefix="/companions", tags=["companions"])
 

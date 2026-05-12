@@ -20,3 +20,15 @@ async def get_analytics(user_id: uuid.UUID, db: AsyncSession = Depends(get_db)):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to fetch analytics: {str(e)}"
         )
+@router.get("/behavioral/{user_id}")
+async def get_behavioral_analytics(user_id: int, db: AsyncSession = Depends(get_db)):
+    """
+    Analyze trading behaviors like revenge trading, overtrading, and sizing consistency.
+    """
+    try:
+        return await analytics_service.get_behavioral_analytics(db, user_id)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to fetch behavioral analytics: {str(e)}"
+        )
